@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "174430866028",
+    "firebase_url": "https://remedies-ca8f0.firebaseio.com",
+    "project_id": "remedies-ca8f0",
+    "storage_bucket": "remedies-ca8f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174430866028:android:8f6f7e94ac5270f4",
+        "android_client_info": {
+          "package_name": "com.app.eunice.remedies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174430866028-osieesuatejnu3murpmujct9qvvmvkbf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.eunice.remedies",
+            "certificate_hash": "a953cc04856711ddcb9fdef09d42975dd9dd6f72"
+          }
+        },
+        {
+          "client_id": "174430866028-52sineeqgrve2nf412t6abp7ub1augai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn_B-0AK0rUrG9IcRRPrsGG6UShQTzw0Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174430866028-52sineeqgrve2nf412t6abp7ub1augai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

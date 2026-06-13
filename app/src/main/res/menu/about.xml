@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.app.eunice.remedies.about">
+
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="Home"
+        android:visible="true"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/feedback"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="Feedback"
+        android:visible="true"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/share"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="Share"
+        android:visible="true"
+        app:showAsAction="collapseActionView"
+
+        />
+    <item
+        android:id="@+id/disc"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="Disclaimer"
+        android:visible="true"
+        app:showAsAction="collapseActionView"
+
+        />
+
+    <item
+        android:id="@+id/about"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="About"
+        android:visible="true"
+        app:showAsAction="collapseActionView"
+
+        />
+
+</menu>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.eunice.remedies">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="HOME ELIXIRS: NATURAL REMEDIES"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.app.eunice.remedies.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.eunice.remedies.AchyFeet"
+            android:label="Achy Feet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Acne"
+            android:label="Acne"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.AllergiesSinus"
+            android:label="Allergies and Sinus"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Anxiety"
+            android:label="Anxiety"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.AthleteFoot"
+            android:label="Athlete&apos;s Foot"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Arthritis"
+            android:label="Arthritis"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.BadBreath"
+            android:label="Bad Breath"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Bites"
+            android:label="Bites"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Blisters"
+            android:label="Blisters"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.BrittleNails"
+            android:label="Brittle Nails"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.BrittleTeeth"
+            android:label="Brittle Teeth"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Burns"
+            android:label="Burns"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Calluses_corn"
+            android:label="Calluses and corn"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Canker_sore"
+            android:label="Canker sore"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Cold_flu"
+            android:label="Cold and flu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.coldsore"
+            android:label="Cold sore"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.constipation"
+            android:label="Constipation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.cracked_heels"
+            android:label="Cracked heels"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Cuticle_infection"
+            android:label="Cuticle infection"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Dandruff"
+            android:label="@string/title_activity_dandruff"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Eczema"
+            android:label="@string/title_activity_eczema"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.FootOdor"
+            android:label="Foot Odor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Headlice"
+            android:label="Head lice"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Heartburn"
+            android:label="@string/title_activity_heartburn"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.high_blood_pressure"
+            android:label="High blood pressure"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Indigestion"
+            android:label="@string/title_activity_indigestion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Morning_sick"
+            android:label="Morning sickness"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Motion_sick"
+            android:label="Motion sickness"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Nail_fung"
+            android:label="Nail Fungus"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Nausea"
+            android:label="@string/title_activity_nausea"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Smooth_skin"
+            android:label="Smooth skin"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Sore_throat"
+            android:label="Sore throat"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.app.eunice.remedies.Sunburn"
+            android:label="@string/title_activity_sunburn"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Swimmers_ear"
+            android:label="Swimmer&apos;s ear"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.UTIs"
+            android:label="UTI"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Warts"
+            android:label="@string/title_activity_warts"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.White_teeth"
+            android:label="White teeth"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.Natural_hair_loss"
+            android:label="Natural hair loss"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.eunice.remedies.About"
+            android:label="About" />
+
+        <activity android:name="com.app.eunice.remedies.Disclaimer"
+            android:label="Disclaimer"
+            ></activity>
+    </application>
+
+</manifest>

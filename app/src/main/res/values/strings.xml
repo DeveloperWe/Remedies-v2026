@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">REMEDIES</string>
+    <string name="title_activity_achy_feet">AchyFeet</string>
+    <string name="large_text">
+
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_acne">Acne</string>
+    <string name="title_activity_allergies_sinus">AllergiesSinus</string>
+    <string name="title_activity_anxiety">Anxiety</string>
+    <string name="title_activity_athlete_foot">AthleteFoot</string>
+    <string name="title_activity_athritis">Athritis</string>
+    <string name="title_activity_bad_breath">BadBreath</string>
+    <string name="title_activity_bites">Bites</string>
+    <string name="title_activity_blisters">Blisters</string>
+    <string name="title_activity_brittle_nails">BrittleNails</string>
+    <string name="title_activity_brittle_teeth">BrittleTeeth</string>
+    <string name="title_activity_burns">Burns</string>
+    <string name="title_activity_calluses_corn">Calluses_corn</string>
+    <string name="title_activity_canker_sore">Canker_sore</string>
+    <string name="title_activity_cold_flu">Cold_flu</string>
+    <string name="title_activity_coldsore">coldsore</string>
+    <string name="title_activity_constipation">constipation</string>
+    <string name="title_activity_cracked_heels">cracked_heels</string>
+    <string name="title_activity_cuticle_infection">Cuticle_infection</string>
+    <string name="title_activity_dandruff">Dandruff</string>
+    <string name="title_activity_eczema">Eczema</string>
+    <string name="title_activity_foot_odor">FootOdor</string>
+    <string name="title_activity_headlice">Headlice</string>
+    <string name="title_activity_heartburn">Heartburn</string>
+    <string name="title_activity_high_blood_pressure">high_blood_pressure</string>
+    <string name="title_activity_indigestion">Indigestion</string>
+    <string name="title_activity_morning_sick">Morning_sick</string>
+    <string name="title_activity_motion_sick">Motion_sick</string>
+    <string name="title_activity_nail_fung">Nail_fung</string>
+    <string name="title_activity_nausea">Nausea</string>
+    <string name="title_activity_smooth_skin">Smooth_skin</string>
+    <string name="title_activity_sore_throat">Sore_throat</string>
+    <string name="title_activity_stress">Stress</string>
+    <string name="title_activity_sunburn">Sunburn</string>
+    <string name="title_activity_swimmers_ear">Swimmers_ear</string>
+    <string name="title_activity_utis">UTIs</string>
+    <string name="title_activity_warts">Warts</string>
+    <string name="title_activity_white_teeth">White_teeth</string>
+    <string name="title_activity_natural_hair_loss">Natural_hair_loss</string>
+    <string name="banner_ad_id">ca-app-pub-1997809280967848/8309774097</string>
+</resources>

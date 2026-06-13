@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottomBarItemOne"
+        android:title="Selected"
+        android:icon="@drawable/check"
+
+        />
+
+    <item
+        android:id="@+id/bottomBarItemTwo"
+        android:icon="@drawable/home"
+        android:title="Home"
+        />
+
+    <item
+        android:id="@+id/bottomBarItemThree"
+        android:icon="@drawable/feedback"
+        android:title="Feedback"
+        />
+    <item
+        android:id="@+id/bottomBarItemFour"
+        android:title="About"
+        android:icon="@drawable/about"
+        />
+    <item
+        android:id="@+id/bottomBarItemFive"
+        android:title="Disclaimer"
+        android:icon="@drawable/disclaimer"
+        />
+
+</menu>
