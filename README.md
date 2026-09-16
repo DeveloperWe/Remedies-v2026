@@ -1,10 +1,10 @@
 # Remedies v2026
 
-A comprehensive Java application for discovering natural remedies and preventive wellness solutions to assist and complement modern medicine.
+A comprehensive Java/Android application for discovering natural remedies and preventive wellness solutions to assist and complement modern medicine.
 
 ## Overview
 
-Remedies v2026 is a Java-based application designed to help users find, research, and manage natural remedies for common ailments. The application focuses on wellness support and prevention, working alongside modern medical care rather than as a replacement.
+Remedies v2026 is a Java/Android-based application designed to help users find, research, and manage natural remedies for common ailments. The application focuses on wellness support and prevention, working alongside modern medical care rather than as a replacement. Available on Android devices for easy access to wellness solutions on-the-go.
 
 ## Features
 
@@ -15,22 +15,26 @@ Remedies v2026 is a Java-based application designed to help users find, research
 - 🔔 **Reminders** - Set reminders for remedy intake and tracking
 - 📊 **Progress Tracking** - Monitor your wellness journey over time
 - 🌍 **Multi-language Support** - Access remedies in multiple languages
+- 📱 **Mobile Optimized** - Seamless experience on Android devices
 
 ## Tech Stack
 
 - **Language**: Java
-- **Build Tool**: Maven/Gradle
-- **Database**: MongoDB (or your database choice)
-- **Authentication**: JWT
-- **Deployment**: Docker, GitHub Actions
+- **Platform**: Android
+- **Build Tool**: Gradle
+- **Database**: Room Database / Firebase
+- **Authentication**: Firebase Authentication
+- **UI Framework**: Android Jetpack
+- **Version Control**: Git/GitHub
 
 ## Getting Started
 
 ### Prerequisites
 
+- Android Studio 4.0 or higher
 - Java 8 or higher
-- Maven/Gradle
-- MongoDB (local or Atlas)
+- Android SDK (API 21+)
+- Gradle 6.0 or higher
 - Git
 
 ### Installation
@@ -41,88 +45,91 @@ Remedies v2026 is a Java-based application designed to help users find, research
    cd Remedies-v2026
    ```
 
-2. **Build the application**
-   ```bash
-   mvn clean install
-   ```
-   or
-   ```bash
-   gradle build
-   ```
+2. **Open in Android Studio**
+   - Launch Android Studio
+   - Click "Open an existing project"
+   - Select the Remedies-v2026 directory
 
 3. **Set up environment variables**
    ```bash
    cp .env.example .env
    ```
-   Configure your MongoDB URI, API keys, and other settings in `.env`
+   Configure your Firebase API keys and other settings in `.env` or `local.properties`
 
-4. **Run the application**
-   ```bash
-   mvn spring-boot:run
-   ```
-   or
-   ```bash
-   java -jar target/remedies-v2026.jar
-   ```
+4. **Install dependencies**
+   - Gradle dependencies will automatically download when you open the project
 
-5. **Access the application**
-   - API: `http://localhost:8080`
+5. **Run the application**
+   - Click "Run" button in Android Studio
+   - Select an emulator or connected Android device
+   - The app will build and install on your device
 
 ## Project Structure
 
 ```
 Remedies-v2026/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── controllers/      # REST API controllers
-│   │   │   ├── services/         # Business logic
-│   │   │   ├── models/           # Entity models
-│   │   │   ├── repositories/     # Data access layer
-│   │   │   └── config/           # Configuration classes
-│   │   └── resources/
-│   │       └── application.properties
-│   └── test/
-│       └── java/
-├── pom.xml                       # Maven configuration
-├── Dockerfile                    # Docker configuration
-├── .env.example                  # Environment variables template
-└── README.md                      # This file
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   ├── com/app/eunice/remedies/
+│   │   │   │   │   ├── activities/          # Activity classes
+│   │   │   │   │   ├── fragments/          # Fragment classes
+│   │   │   │   │   ├── viewmodels/         # MVVM ViewModels
+│   │   │   │   │   ├── repositories/       # Data repositories
+│   │   │   │   │   ├── models/             # Data models
+│   │   │   │   │   └── utils/              # Utility classes
+│   │   │   ├── res/
+│   │   │   │   ├── layout/             # XML layouts
+│   │   │   │   ├─�� drawable/           # Drawable resources
+│   │   │   │   ├── values/             # String/color resources
+│   │   │   │   └── menu/               # Menu resources
+│   │   │   └── AndroidManifest.xml
+│   │   ├── test/                       # Unit tests
+│   │   └── androidTest/                # Instrumented tests
+│   └── build.gradle
+├── gradle/
+├── settings.gradle
+├── build.gradle
+├── .env.example                        # Environment variables template
+└── README.md                           # This file
 ```
 
 ## Available Commands
 
 ```bash
-mvn clean install    # Build the application
-mvn spring-boot:run  # Run development server
-mvn test            # Run tests
-mvn package         # Package for deployment
+gradle build              # Build the application
+gradle installDebug       # Install debug APK on connected device
+gradle test              # Run unit tests
+gradle connectedTest     # Run instrumented tests
+gradle assembleRelease   # Build release APK
 ```
 
-## API Endpoints
+## API Integration
 
 ### Remedies
-- `GET /api/remedies` - Get all remedies
-- `GET /api/remedies/:id` - Get remedy details
-- `POST /api/remedies` - Create new remedy (admin)
-- `PUT /api/remedies/:id` - Update remedy (admin)
-- `DELETE /api/remedies/:id` - Delete remedy (admin)
+- Fetch all remedies from local database
+- Search remedies by name or condition
+- Get detailed remedy information
+- Browse remedies by category
 
 ### Conditions
-- `GET /api/conditions` - Get all health conditions
-- `GET /api/conditions/:id/remedies` - Get remedies for a condition
+- View available health conditions
+- Find remedies matching specific conditions
+- Track personal conditions
 
-### User Tracking
-- `GET /api/users/:id/tracking` - Get user's remedy tracking
-- `POST /api/users/:id/tracking` - Log remedy usage
-- `GET /api/users/:id/progress` - Get wellness progress
+### User Features
+- Create and manage user profile
+- Track remedy usage history
+- Set wellness reminders
+- Monitor progress and improvements
 
 ## Authentication
 
-The app uses JWT (JSON Web Tokens) for authentication. Users can:
+The app uses Firebase Authentication for secure user management. Users can:
 - Register with email and password
 - Login securely
-- Maintain session across devices
+- Maintain session across app sessions
 - Reset password via email
 
 ## Contributing
@@ -139,31 +146,37 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ## Testing
 
-Run tests with:
+Run unit tests with:
 ```bash
-mvn test
+gradle test
 ```
 
-For coverage report:
+Run instrumented tests on a device/emulator:
 ```bash
-mvn jacoco:report
+gradle connectedTest
 ```
 
-## Deployment
+## Building Release APK
 
-### Docker
-```bash
-docker build -t remedies-v2026 .
-docker run -p 8080:8080 remedies-v2026
-```
+1. Generate a signed key:
+   ```bash
+   keytool -genkey -v -keystore remedies-key.jks -keyalg RSA -keysize 2048 -validity 10000
+   ```
 
-### Production Deployment
-See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed production deployment instructions.
+2. Build release APK:
+   ```bash
+   gradle assembleRelease
+   ```
+
+3. APK will be located in `app/build/outputs/apk/release/`
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed release deployment instructions.
 
 ## Security
 
-- All API endpoints are protected with authentication
-- Sensitive data is encrypted
+- All user data is encrypted
+- Authentication via Firebase
+- Secure API communication with SSL/TLS
 - Regular security audits are conducted
 - Please report security vulnerabilities to [security@example.com]
 
@@ -173,12 +186,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Roadmap
 
-- [ ] Mobile app support
+- [ ] Wearable app support (Wear OS)
 - [ ] AI-powered remedy recommendations
 - [ ] Healthcare provider integration
-- [ ] Multilingual content expansion
+- [ ] Offline mode support
 - [ ] Community features (forums, discussions)
 - [ ] Advanced analytics dashboard
+- [ ] Cloud sync across devices
 
 ## Support
 
