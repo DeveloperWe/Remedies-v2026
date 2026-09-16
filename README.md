@@ -1,10 +1,10 @@
 # Remedies v2026
 
-A comprehensive web application for managing and discovering natural remedies, wellness solutions, and health alternatives.
+A comprehensive Java application for discovering natural remedies and preventive wellness solutions to assist and complement modern medicine.
 
 ## Overview
 
-Remedies v2026 is a modern web platform designed to help users find, research, and manage natural remedies for common ailments. Whether you're looking for herbal solutions, lifestyle changes, or evidence-based alternatives, this app provides curated information and personalized recommendations.
+Remedies v2026 is a Java-based application designed to help users find, research, and manage natural remedies for common ailments. The application focuses on wellness support and prevention, working alongside modern medical care rather than as a replacement.
 
 ## Features
 
@@ -18,9 +18,9 @@ Remedies v2026 is a modern web platform designed to help users find, research, a
 
 ## Tech Stack
 
-- **Frontend**: React, TypeScript, Tailwind CSS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
+- **Language**: Java
+- **Build Tool**: Maven/Gradle
+- **Database**: MongoDB (or your database choice)
 - **Authentication**: JWT
 - **Deployment**: Docker, GitHub Actions
 
@@ -28,8 +28,8 @@ Remedies v2026 is a modern web platform designed to help users find, research, a
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
-- npm or yarn
+- Java 8 or higher
+- Maven/Gradle
 - MongoDB (local or Atlas)
 - Git
 
@@ -41,9 +41,13 @@ Remedies v2026 is a modern web platform designed to help users find, research, a
    cd Remedies-v2026
    ```
 
-2. **Install dependencies**
+2. **Build the application**
    ```bash
-   npm install
+   mvn clean install
+   ```
+   or
+   ```bash
+   gradle build
    ```
 
 3. **Set up environment variables**
@@ -52,52 +56,47 @@ Remedies v2026 is a modern web platform designed to help users find, research, a
    ```
    Configure your MongoDB URI, API keys, and other settings in `.env`
 
-4. **Start the development server**
+4. **Run the application**
    ```bash
-   npm run dev
+   mvn spring-boot:run
+   ```
+   or
+   ```bash
+   java -jar target/remedies-v2026.jar
    ```
 
 5. **Access the application**
-   - Frontend: `http://localhost:3000`
-   - Backend API: `http://localhost:5000`
+   - API: `http://localhost:8080`
 
 ## Project Structure
 
 ```
 Remedies-v2026/
-├── client/                 # React frontend
-│   ├── src/
-│   │   ├── components/    # Reusable React components
-│   │   ├── pages/         # Page components
-│   │   ├── services/      # API service calls
-│   │   └── styles/        # Global styles
-│   └── package.json
-├── server/                # Node.js/Express backend
-│   ├── routes/           # API routes
-│   ├── models/           # MongoDB models
-│   ├── controllers/      # Route controllers
-│   ├── middleware/       # Express middleware
-│   └── server.js
-├── docker-compose.yml    # Docker configuration
-├── .env.example          # Environment variables template
-└── README.md             # This file
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── controllers/      # REST API controllers
+│   │   │   ├── services/         # Business logic
+│   │   │   ├── models/           # Entity models
+│   │   │   ├── repositories/     # Data access layer
+│   │   │   └── config/           # Configuration classes
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/
+│       └── java/
+├── pom.xml                       # Maven configuration
+├── Dockerfile                    # Docker configuration
+├── .env.example                  # Environment variables template
+└── README.md                      # This file
 ```
 
-## Available Scripts
+## Available Commands
 
-### Frontend
 ```bash
-npm run dev       # Start development server
-npm run build     # Build for production
-npm run test      # Run tests
-npm run lint      # Run ESLint
-```
-
-### Backend
-```bash
-npm run dev       # Start with nodemon
-npm run start     # Start production server
-npm test          # Run tests
+mvn clean install    # Build the application
+mvn spring-boot:run  # Run development server
+mvn test            # Run tests
+mvn package         # Package for deployment
 ```
 
 ## API Endpoints
@@ -142,19 +141,20 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 Run tests with:
 ```bash
-npm test
+mvn test
 ```
 
 For coverage report:
 ```bash
-npm run test:coverage
+mvn jacoco:report
 ```
 
 ## Deployment
 
 ### Docker
 ```bash
-docker-compose up --build
+docker build -t remedies-v2026 .
+docker run -p 8080:8080 remedies-v2026
 ```
 
 ### Production Deployment
@@ -173,11 +173,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Roadmap
 
-- [ ] Mobile app (React Native)
+- [ ] Mobile app support
 - [ ] AI-powered remedy recommendations
-- [ ] Telemedicine integration
+- [ ] Healthcare provider integration
 - [ ] Multilingual content expansion
-- [ ] Social features (groups, forums)
+- [ ] Community features (forums, discussions)
 - [ ] Advanced analytics dashboard
 
 ## Support
